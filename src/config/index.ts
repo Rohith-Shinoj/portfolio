@@ -1,98 +1,108 @@
 import type { SiteConfig, SiteContent } from "../types";
 
 export const SITE_CONFIG: SiteConfig = {
-  title: "Alejandro Múnez — Mobile & Web Developer",
-  author: "Alejandro Múnez Cuntez",
+  title: "Portfolio | Rohith Shinoj",
+  author: "Rohith Shinoj Kumar",
   description:
-    "Software Engineer based in San Francisco, USA. I specialize in UI design, web and mobile application development and maintenance.",
+    "Software Engineer based in Bangalore, India.",
   lang: "en",
   siteLogo: "/alejandro-small.jpg",
   navLinks: [
     { text: "Experience", href: "#experience" },
     { text: "Projects", href: "#projects" },
-    { text: "About", href: "#about" },
+    { text: "Publications", href: "#publications" },
+    { text: "Blog", href: "https://deep-thoughts-blog.vercel.app"},
+    // { text: "About", href: "#about" },
   ],
   socialLinks: [
-    { text: "Twitter", href: "https://github.com/immois/astro-zen" },
-    { text: "LinkedIn", href: "https://github.com/immois/astro-zen" },
-    { text: "Github", href: "https://github.com/immois/astro-zen" },
-    { text: "Youtube", href: "https://github.com/immois/astro-zen" },
-    { text: "Dribbble", href: "https://github.com/immois/astro-zen" },
+    { text: "Contact", href: "mailto:rohithshinoj@gmail.com" },
+    { text: "LinkedIn", href: "https://www.linkedin.com/in/rohith-8aa473147/" },
+    { text: "Github", href: "https://github.com/Rohith-Shinoj" },
+
   ],
-  socialImage: "/zen-og.png",
+  socialImage: "photo.png",
   canonicalURL: "https://astro-zen.vercel.app",
 };
 
 export const SITE_CONTENT: SiteContent = {
   hero: {
-    name: "Alejandro Múnez",
-    specialty: "Mobile & Web Developer",
+    name: "Rohith Shinoj Kumar",
+    specialty: "Software Engineer | Exploring Scalable Systems & ML",
     summary:
-      "Developer based in San Francisco, USA. I specialize in UI design, web and mobile application development and maintenance.",
-    email: "example@email.com",
+      "I'm a final-year Computer Science and Engineering student at the National Institute of Technology Karnataka. I’m passionate about building scalable systems at the intersection of software engineering and machine learning. With a strong foundation in Python, C++, and ML, I’ve worked on end-to-end projects across MLOps and full-stack development — turning ideas into deployable, impactful solutions. Always eager to learn, collaborate, and innovate. Let’s connect!",
+    email: "rohithshinoj@gmail.com",
   },
   experience: [
     {
-      company: "Zalmart",
-      position: "Lead Android Developer",
-      startDate: "May 2018",
-      endDate: "Sept 2020",
+      company: "Centre for Development of Telematics (C-DOT)",
+      position: "Research Engineer (Incoming)",
+      startDate: "August 2025",
+      endDate: "Present",
       summary: [
-        "Implemented advanced memory management and code optimization techniques, resulting in a reduction in application load time by 40% and a decrease in crashes by 25%. This significantly improved user experience and increased user retention by 20%.",
-        "I led a team of developers in building and integrating new features using Jetpack Android components such as LiveData and ViewModel. This enabled us to build scalable and maintainable applications, reducing the crash rate by 20% and speeding up the time to delivery of new features by 15%.",
-        "Integrated Google Pay for in-app purchases, resulting in a 35% increase in mobile transaction revenue. Additionally, implemented Firebase Analytics to gain insights into user behavior, enabling data-driven optimizations and a 30% increase in user retention.",
+        "Yet to join",
       ],
     },
     {
-      company: "Bankit",
-      position: "Mobile Developer",
-      startDate: "Feb 2017",
-      endDate: "May 2018",
+      company: "Accenture Inc.",
+      position: "Software Development Engineering Intern",
+      startDate: "May 2024",
+      endDate: "July 2024",
       summary: [
-        "I designed and developed a mobile application using Flutter, allowing it to be deployed on both Android and iOS with a single codebase. This reduced development time by 50% and maintenance costs by 30%, facilitating a consistent user experience on both platforms.",
-        "I integrated biometric authentication and data encryption, significantly improving the security of user data. This implementation resulted in a 40% increase in user trust and a 25% reduction in unauthorized access attempts.",
+        "Designed and implemented a production-ready pipeline for dynamic pricing using real customer analytics data. Applied Facebook Prophet for time-series based demand forecasting, and Bayesian A/B Testing for price optimizations.",
+
+        "Built a full-stack application to deploy the solution in a real-time business environment — integrating a ReactJS frontend with Flask-based backend APIs to serve model predictions and automate pricing adjustments aligned with demand metrics. Focused on clean architecture, modularity, and performance to ensure scalability and maintainability across potential product lines.",
       ],
     },
     {
-      company: "Driveer",
-      position: "Frontend Developer",
-      startDate: "Jun 2015",
-      endDate: "Oct 2016",
-      summary:
-        "Developed and integrated a real-time vehicle tracking system using WebSockets, improving accuracy and data update in the application. This functionality increased user satisfaction by 30% and reduced customer service inquiries by 25%.",
+      company: "Outside the Stack (OTS)",
+      position: "Member of Project Team - Remote",
+      startDate: "Feb 2024",
+      endDate: "May 2024",
+      summary:[
+        "Collaborated closely with the engineering team, under the guidance of Nalini Elkins, to optimize buffer utilization and reduce latency in a TLS forward and reverse proxy pair, enabling seamless secure connections between clients and servers with incompatible or deprecated SSL versions.",
+        
+        "Designed and implemented a logging system that flushes SSL session history and keylog data to memory-mapped JSON files, replacing the initial system logger. This improvement reduced read-write latency by approximately 20% and CPU utilization during peak loads by 8%, enhancing overall proxy performance and reliability."
+      ]
     },
   ],
+
   projects: [
     {
-      name: "Spotifu Music",
-      summary: "A music streaming app that emulates Spotify's core features.",
-      linkPreview: "/",
-      linkSource: "https://github.com/immois/astro-zen",
+      name: "ChatWithPDF: PDF Chatbot with OCR",
+      summary: "Multimodal PDF question-answering system that integrates LangChain with HuggingFace open-source models, together with OCR and Image recognition tp extract and interpret both text and visual information (graphs/charts/photos) from documents. THe final model is wrapped in a a simple Flask UI to allow user PDF upload and question",
+      linkPreview: "",
+      linkSource: "https://https://github.com/Rohith-Shinoj/ChatWithPDF.com/",
+      image: "/clone-ig.png",
+    },
+    {
+      name: "DeliverEats: An On-Campus Food Delivery System",
+      summary: "Production-ready web application for online food ordering in campus, enabling customers to browse menus, place orders, and make secure payments with restaurants inside NITK with a dynamic, user-friendly interface. Implemented secure payment workflows via Razorpay API and encrypted user transactions.",
+      linkPreview: "",
+      linkSource: "https://github.com/Rohith-Shinoj/On-Campus-Food-Delivery",
       image: "/spotifu.png",
     },
     {
-      name: "Shopp App",
-      summary: "An e-commerce platform that replicates Shopify's key features.",
-      linkPreview: "/",
-      linkSource: "https://github.com/immois/astro-zen",
+      name: "PomoNet-v1: Pomegranate Crop Disease Identification",
+      summary: " This project is a part of a funded joint initiative between NITK and Indian Council for Agricultural Research (ICAR). Trained on a highly limited ~500 images sourced directly from farms by ICAR, the model achieved a 97.7% accuracy on independant evaluation. The full training and inference pipeline was delivered to ICAR for integration into their mobile diagnostic tool to support real-time, field-level disease identification.",
+      linkPreview: "",
+      linkSource: "",
       image: "/shopify-clon.png",
     },
-    {
-      name: "ClonTagram",
-      summary: "A social network that replicates the features of Instagram",
-      linkPreview: "/",
-      linkSource: "https://github.com/immois/astro-zen",
-      image: "/clone-ig.png",
-    },
   ],
-  about: {
-    description: `
-      Hi, I’m Alejandro Múnez, a passionate Mobile and Web Developer with a knack for crafting seamless digital experiences. With a strong background in both Android and iOS development, as well as front-end web technologies, I thrive in the intersection where creativity meets technology.
 
-      Over the years, I’ve honed my skills in building robust, user-friendly applications that not only meet the needs of users but also push the boundaries of what’s possible. My projects range from innovative mobile applications to responsive web designs, all with a focus on performance, security, and scalability.
-    `,
-    image: "/alejandro-big.jpg",
-  },
+  publications: [
+    {name: "1. H-Infinity Enhanced CNN-LSTM for Arrythmia Detection from Heart Sound Recordings",
+     conference: "",
+     date: "June 2025 (Under Review)",
+     link: "",
+    },
+    {name: "2. A Deep Learning Framework for dynamic detection of ARP Spoofing attacks",
+      conference: "IEEE Conference on Computing, Communication and Networking Technologies (ICCCNT), IIT Delhi",
+      date: "July 2023",
+      link: "https://ieeexplore.ieee.org/abstract/document/10308031",
+     },
+  ],
 };
 
 // #5755ff
+

@@ -5,23 +5,60 @@ type Props = HeroProps;
 const { name, specialty, summary, email } = Astro.props;
 ---
 
-<section class="py-24 md:py-32" id="#hero">
-  <h1
-    class="mb-1.5 font-serif text-7xl font-bold tracking-tightest text-white sm:text-8xl md:mb-0 md:text-9xl"
-  >
-    {name}
-  </h1>
-  <p
-    class="mb-9 font-serif text-4xl leading-[46px] font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl"
-  >
-    {specialty}
-  </p>
-  <p class="mb-16 text-base font-normal text-neutral md:text-lg">
-    {summary}
-  </p>
+<section class="py-4 md:py-6" id="hero">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col items-center text-center gap-8">
+      
+      <!-- Image on top and round -->
+      <div class="w-60 h-60">
+        <img
+          src="/photo.png"
+          alt="Hero Image"
+          class="w-full h-full rounded-full object-cover mx-auto shadow-xl"
+        />
+      </div>
 
-  <a
-    class="inline-block rounded-full bg-primary px-8 py-5 text-sm leading-5 font-medium text-[#fff]"
-    href={`mailto:${email}`}>Get in Touch</a
-  >
+      <!-- Text below -->
+      <div class="max-w-m text-center mx-auto">
+        <h1 class="mb-3 font-bold text-white text-3xl leading-tight">
+          {name}
+        </h1>
+        <p class="mb-4 text-primary font-bold text-lg leading-snug">
+          {specialty}
+        </p>
+        <p class="mb-8 text-neutral text-base md:text-xs leading-relaxed">
+          {summary}
+        </p>
+      
+        <div class="flex flex-col md:flex-row justify-center items-center gap-4 mt-6">
+          <a
+            class="inline-block rounded-full bg-primary px-8 py-4 text-sm font-medium text-white hover:bg-primary/90 transition"
+            href="https://drive.google.com/file/d/1nrl9N-hDIQAo3hzhlgM-gVCSvtI2OAsy/view?usp=drive_link" target="_blank"
+          >
+            Resume
+          </a>
+          <a
+            class="inline-block rounded-full bg-primary px-8 py-4 text-sm font-medium text-white hover:bg-primary/90 transition"
+            href="https://deep-thoughts-blog.vercel.app" target="_blank"
+          >
+            Visit my Blog
+          </a>
+        </div>
+        <div class="flex justify-center items-center gap-6 mt-6 text-white text-2xl">
+          <a href="mailto:rohithshinoj@gmail.com" aria-label="Email" class="hover:text-primary transition">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/rohith-8aa473147/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hover:text-primary transition">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/Rohith-Shinoj" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="hover:text-primary transition">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+      
+        
+      </div>
+    </div>
+  </div>
 </section>

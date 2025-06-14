@@ -11,7 +11,7 @@ const { siteLogo, navLinks } = Astro.props;
 <header
   class="sticky top-0 z-50 mx-auto flex max-w-5xl animate-slide-in justify-between bg-black px-5 py-6"
 >
-  <a href="/" aria-label="Home link">
+  <!-- <a href="/" aria-label="Home link">
     <Image
       class="rounded-full"
       src={siteLogo}
@@ -19,7 +19,7 @@ const { siteLogo, navLinks } = Astro.props;
       height="45"
       alt="website logo"
     />
-  </a>
+  </a> -->
 
   <button
     type="button"
@@ -42,9 +42,12 @@ const { siteLogo, navLinks } = Astro.props;
             <a
               class={`nav-item relative block p-2 text-sm font-medium transition-all duration-500 after:absolute after:bottom-0 after:left-2/4 after:h-2 after:w-1 after:-translate-x-2/4 after:text-primary after:opacity-0 after:content-['•'] hover:text-white`}
               href={link.href}
+              target={link.text === "Blog" ? "_blank" : "_self"}
+              rel={link.text === "Blog" ? "noopener noreferrer" : undefined}
             >
               {link.text}
             </a>
+
           </li>
         ))
       }

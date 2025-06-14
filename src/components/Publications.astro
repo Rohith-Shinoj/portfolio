@@ -1,0 +1,40 @@
+---
+import Section from "./Section.astro";
+import type { PublicationProps } from "@types";
+
+interface Props {
+  publications: PublicationProps[];
+}
+
+const { publications } = Astro.props;
+---
+
+<Section text="Publications" href="#publications">
+    {
+      publications.map(({ name, conference, date, link }) => (
+        <div class="mb-10">
+          <h3 class="mb-1.5 font-serif text-l font-semibold text-white">
+            {name}
+          </h3>
+          <div class="flex flex-col items-start pb-5">
+            <h4 class="mb-0.5 font-serif text-l font-medium text-primary">
+              {conference}
+            </h4>
+            <span class="pb-[2px] text-sm text-white/70">
+              {date}
+            </span>
+  
+            {
+              link && (
+                <a href={link} target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex items-center gap-2 text-primary hover:underline">
+                  <span class="text-xl">📄</span>
+                  <span class="text-sm">View Paper</span>
+                </a>
+              )
+            }
+          </div>
+        </div>
+      ))
+    }
+  </Section>
+  
