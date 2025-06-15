@@ -1,6 +1,4 @@
-
-Minimalist portfolio website built with Astro and TailwindCSS, inspired by AstroZen 
-
+Minimalist portfolio website built with Astro and TailwindCSS, inspired by AstroZen
 
 ## 🚀 Getting Started
 

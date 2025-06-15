@@ -7,57 +7,75 @@ const { name, specialty, summary, email } = Astro.props;
 
 <section class="py-4 md:py-6" id="hero">
   <div class="container mx-auto px-4">
-    <div class="flex flex-col items-center text-center gap-8">
-      
+    <div class="flex flex-col items-center gap-8 text-center">
       <!-- Image on top and round -->
-      <div class="w-60 h-60">
+      <div class="h-60 w-60">
         <img
           src="/photo.png"
           alt="Hero Image"
-          class="w-full h-full rounded-full object-cover mx-auto shadow-xl"
+          class="mx-auto h-full w-full rounded-full object-cover shadow-xl"
         />
       </div>
 
       <!-- Text below -->
-      <div class="max-w-m text-center mx-auto">
-        <h1 class="mb-3 font-bold text-white text-3xl leading-tight">
+      <div class="max-w-m mx-auto text-center">
+        <h1 class="mb-3 text-3xl leading-tight font-bold text-white">
           {name}
         </h1>
-        <p class="mb-4 text-primary font-bold text-lg leading-snug">
+        <p class="mb-4 text-lg leading-snug font-bold text-primary">
           {specialty}
         </p>
-        <p class="mb-8 text-neutral text-base md:text-xs leading-relaxed">
+        <p class="mb-8 text-base leading-relaxed text-neutral md:text-xs">
           {summary}
         </p>
-      
-        <div class="flex flex-col md:flex-row justify-center items-center gap-4 mt-6">
+
+        <div
+          class="mt-6 flex flex-col items-center justify-center gap-4 md:flex-row"
+        >
           <a
-            class="inline-block rounded-full bg-primary px-8 py-4 text-sm font-medium text-white hover:bg-primary/90 transition"
-            href="https://drive.google.com/file/d/1nrl9N-hDIQAo3hzhlgM-gVCSvtI2OAsy/view?usp=drive_link" target="_blank"
+            class="inline-block rounded-full bg-primary px-8 py-4 text-sm font-medium text-white transition hover:bg-primary/90"
+            href="https://drive.google.com/file/d/1nrl9N-hDIQAo3hzhlgM-gVCSvtI2OAsy/view?usp=drive_link"
+            target="_blank"
           >
             Resume
           </a>
           <a
-            class="inline-block rounded-full bg-primary px-8 py-4 text-sm font-medium text-white hover:bg-primary/90 transition"
-            href="https://deep-thoughts-blog.vercel.app" target="_blank"
+            class="inline-block rounded-full bg-primary px-8 py-4 text-sm font-medium text-white transition hover:bg-primary/90"
+            href="https://deeper-thoughts-blog.vercel.app"
+            target="_blank"
           >
             Visit my Blog
           </a>
         </div>
-        <div class="flex justify-center items-center gap-6 mt-6 text-white text-2xl">
-          <a href="mailto:rohithshinoj@gmail.com" aria-label="Email" class="hover:text-primary transition">
+        <div
+          class="mt-6 flex items-center justify-center gap-6 text-2xl text-white"
+        >
+          <a
+            href="mailto:rohithshinoj@gmail.com"
+            aria-label="Email"
+            class="transition hover:text-primary"
+          >
             <i class="fas fa-envelope"></i>
           </a>
-          <a href="https://www.linkedin.com/in/rohith-8aa473147/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hover:text-primary transition">
+          <a
+            href="https://www.linkedin.com/in/rohith-8aa473147/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            class="transition hover:text-primary"
+          >
             <i class="fab fa-linkedin"></i>
           </a>
-          <a href="https://github.com/Rohith-Shinoj" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="hover:text-primary transition">
+          <a
+            href="https://github.com/Rohith-Shinoj"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            class="transition hover:text-primary"
+          >
             <i class="fab fa-github"></i>
           </a>
         </div>
-      </div>
-      
-        
       </div>
     </div>
   </div>
