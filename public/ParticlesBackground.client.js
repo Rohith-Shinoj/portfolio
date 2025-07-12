@@ -51,7 +51,7 @@ export function initParticles() {
       events: {
         onHover: {
           enable: true,
-          mode: "repulse"
+          mode: "grab"
         },
         onClick: {
           enable: true,

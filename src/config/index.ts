@@ -44,9 +44,11 @@ export const SITE_CONTENT: SiteContent = {
       startDate: "May 2024",
       endDate: "July 2024",
       summary: [
-        "Designed and implemented a production-ready pipeline for dynamic pricing using real customer analytics data. Applied Facebook Prophet for time-series based demand forecasting, and Bayesian A/B Testing for price optimizations.",
+        "Designed and deployed a scalable dynamic pricing pipeline, leveraging real customer analytics data and Facebook Prophet for time-series demand forecasting — improving forecast accuracy to 94%",
 
-        "Built a full-stack application to deploy the solution in a real-time business environment — integrating a ReactJS frontend with Flask-based backend APIs to serve model predictions and automate pricing adjustments aligned with demand metrics. Focused on clean architecture, modularity, and performance to ensure scalability and maintainability across potential product lines.",
+        "Implemented Bayesian A/B testing for price optimization,in leading to a 12% lift in customer conversion rates by continuously aligning prices with predicted demand.",
+
+        "Developed a full-stack application integrating ReactJS frontend with Flask backend APIs, automating real-time pricing updates future scalability."
       ],
     },
     {
@@ -55,34 +57,50 @@ export const SITE_CONTENT: SiteContent = {
       startDate: "Feb 2024",
       endDate: "May 2024",
       summary: [
-        "Collaborated closely with the engineering team, under the guidance of Nalini Elkins, to optimize buffer utilization and reduce latency in a TLS forward and reverse proxy pair, enabling seamless secure connections between clients and servers with incompatible or deprecated SSL versions.",
+        "Optimized buffer utilization and reduced latency in a TLS proxy pair, enabling secure connections between clients and servers with deprecated SSL versions.",
 
-        "Designed and implemented a logging system that flushes SSL session history and keylog data to memory-mapped JSON files, replacing the initial system logger. This improvement reduced read-write latency by approximately 20% and CPU utilization during peak loads by 8%, enhancing overall proxy performance and reliability.",
+        "Developed a high-performance logging system using memory-mapped JSON files, replacing the intial system logger.",
+
+        "Cut read-write latency bynearly  20% and peak CPU usage by 8%, boosting proxy performance and reliability on new connections."
       ],
     },
   ],
 
   projects: [
     {
-      name: "ChatWithPDF: PDF Chatbot with OCR",
-      summary:
-        "Multimodal PDF question-answering system that integrates LangChain with HuggingFace open-source models, together with OCR and Image recognition tp extract and interpret both text and visual information (graphs/charts/photos) from documents. THe final model is wrapped in a a simple Flask UI to allow user PDF upload and question",
-      linkPreview: "",
-      linkSource: "https://https://github.com/Rohith-Shinoj/ChatWithPDF.com/",
-      image: "/clone-ig.png",
+      name: "ZAlpha - GenAI Powered Stock Portfolio Enhancer",
+      summary: [
+        "Built a portfolio analytics platform with advanced risk models (VaR, CVaR, MPT) for real-time multi-asset analysis and optimizations",
+        "Integrated Ollama-hosted local LLMs and Finnhub API data for live and historical financial data, generating contextual strategy insights and AI-powered financial narratives.",
+        "Built interactive dashboards using D3.js and LLM-powered tooltips, enabling real-time performance attribution, factor exposure analysis, and contextual insights from market data and portfolio behavior."
+      ],
+      tags: ["Python", "Ollama (Local LLMs)", "REST APIs", "Flask", "react.js", "FinTech"],
+      linkPreview: "https://www.z-alpha.rohithshinoj.com",
+      linkSource: "https://github.com/Rohith-Shinoj/ZAlpha-AI-Powered-Stock-Optimization/",
+      image: "",
     },
     {
       name: "DeliverEats: An On-Campus Food Delivery System",
-      summary:
-        "Production-ready web application for online food ordering in campus, enabling customers to browse menus, place orders, and make secure payments with restaurants inside NITK with a dynamic, user-friendly interface. Implemented secure payment workflows via Razorpay API and encrypted user transactions.",
+      summary: [
+        "Production-ready web application for online food ordering in campus.",
+        "Enables customers to browse menus, place orders, and make secure payments with restaurants inside NITK.",
+        "Dynamic, user-friendly interface.",
+        "Implemented secure payment workflows via Razorpay API and encrypted user transactions."
+      ],
+      tags: ["1", "2", "3", "4"],
+      
       linkPreview: "",
       linkSource: "https://github.com/Rohith-Shinoj/On-Campus-Food-Delivery",
       image: "/delivereats-logo.png",
     },
     {
-      name: "PomoNet-v1: Pomegranate Crop Disease Identification",
-      summary:
-        " This project is a part of a funded joint initiative between NITK and Indian Council for Agricultural Research (ICAR). Trained on a highly limited ~500 images sourced directly from farms by ICAR, the model achieved a 97.7% accuracy on independant evaluation. The full training and inference pipeline was delivered to ICAR for integration into their mobile diagnostic tool to support real-time, field-level disease identification.",
+      name: "Transformer-Based Multimodal Pomegranate Disease Detection (ICAR-affiliated)",
+      summary: [
+        "This project is part of a funded joint initiative between NITK and the Indian Council of Agricultural Research (ICAR) focussed on deep-learning aided crop disease detection",
+        "Developed a semi-supervised learning pipeline combining EfficientNet-CNN backbones with Vision Transformer (ViT), leveraging attention-based region focusing to achieve 95.7% classification accuracy despite a small non-standard dataset of ~500 field-collected leaf and fruit images across multiple disease categories.",
+        "Worked in a team of 3 to deliver a fully optimized ONNX-quantized model (for cross-platform deployment) to ICAR for upcoming integration into their field-level diagnostic tool."
+      ],
+      tags: ["Semi-Supervised Learning", "ONNX", "PyTorch","TorchVision", "ViT"],
       linkPreview: "",
       linkSource: "",
       image: "/shopify-clon.png",

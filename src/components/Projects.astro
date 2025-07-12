@@ -10,9 +10,8 @@ interface Props {
 const { projects } = Astro.props;
 ---
 
-<!-- Image sidebars
 
-<Section text="Featured Projects" href="projects">
+<!-- <Section text="Featured Projects" href="projects">
   {
     projects.map(({ name, summary, image, linkPreview, linkSource }, index) => {
       const top = 98 + index * 40;
@@ -26,7 +25,13 @@ const { projects } = Astro.props;
               <h3 class="mb-5 font-serif text-xl font-medium text-primary">
                 {name}
               </h3>
-              <p class="text-xs text-neutral">{summary}</p>
+              {Array.isArray(summary) ? (
+                <ul class="text-xs text-neutral list-disc list-inside ml-2 mb-2">
+                  {summary.map(point => <li>{point}</li>)}
+                </ul>
+              ) : (
+                <p class="text-xs text-neutral">{summary}</p>
+              )}
               <div class="flex gap-5 pt-10 text-white">
                 {linkSource && (
                   <a
@@ -52,7 +57,7 @@ const { projects } = Astro.props;
             </div>
             <div class="flex items-end justify-end overflow-hidden rounded-ss-xl rounded-ee-2xl">
               <Image
-                class="h-full w-full object-contain sm:h-[85%]"
+                class="h-full w-full px-4 object-contain sm:h-[85%]"
                 src={image}
                 alt={name}
                 width={245}
@@ -68,20 +73,35 @@ const { projects } = Astro.props;
 </Section> -->
 <Section text="Featured Projects" href="projects">
   {
-    projects.map(({ name, summary, image, linkPreview, linkSource }, index) => {
+    projects.map(({ name, summary, image, linkPreview, linkSource, tags }, index) => {
       const top = 98 + index * 40;
       return (
         <div
           style={`top: ${top}px;`}
-          class="sticky mb-12 rounded-2xl border border-neutral/20 bg-black"
+          class="sticky mb-8 rounded-2xl border border-neutral/20 bg-black transition duration-200 hover:bg-[#232b38]/95 hover:shadow-xl hover:border-primary/40"
         >
-          <div class="bg-difu relative z-[1] grid h-auto w-full grid-rows-1 rounded-2xl bg-[#1c232d]/85 before:absolute before:inset-0 before:z-[-1] before:rounded-2xl before:bg-[url(/raja.png)] before:bg-[length:128px] before:bg-repeat before:opacity-[5%] before:content-[''] sm:grid-cols-1">
-            <div class="px-6 py-12">
+          <div class="bg-difu relative z-[1] grid w-full grid-rows-1 rounded-2xl bg-[#1c232d]/95 before:absolute before:inset-0 before:z-[-1] before:rounded-2xl before:bg-[length:128px] before:bg-repeat before:opacity-[5%] before:content-[''] sm:grid-cols-1">
+            <div class="px-6 py-6">
               <h3 class="mb-5 font-serif text-xl font-medium text-primary">
                 {name}
               </h3>
-              <p class="text-xs text-neutral">{summary}</p>
-              <div class="flex gap-5 pt-10 text-white">
+              {Array.isArray(summary) ? (
+                <ul class="text-xs text-neutral list-disc list-inside ml-2 mb-2">
+  {summary.map(point => <li class="mb-4 last:mb-0">{point}</li>)}
+</ul>
+              ) : (
+                <p class="text-xs text-neutral">{summary}</p>
+              )}
+              {tags && tags.length > 0 && (
+                <div class="flex flex-wrap gap-2 mb-2 mt-4">
+                  {tags.map(tag => (
+                    <span class="inline-block rounded bg-primary/10 px-2 py-1 gap-4 text-xs font-semibold text-primary border border-primary/30">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+              <div class="flex gap-5 pt-2 text-white">
                 {linkSource && (
                   <a
                     href={linkSource}
