@@ -1,0 +1,65 @@
+---
+import type { HeaderProps } from "@types";
+
+type Props = Pick<HeaderProps, 'navLinks'>;
+
+const { navLinks } = Astro.props;
+---
+
+<nav class="fixed top-4 left-4 z-40 md:top-8 md:left-8 lg:block">
+  <ul class="flex flex-col gap-2 md:flex-row md:gap-6">
+    {
+      navLinks.map((link) => (
+        <li class="relative">
+          <a
+            class={`nav-item relative block px-2 py-1.5 text-xs font-medium text-neutral transition-all duration-300 after:absolute after:bottom-0 after:left-2/4 after:h-2 after:w-1 after:-translate-x-2/4 after:text-primary after:opacity-0 after:content-['•'] hover:text-white hover:scale-105 md:px-3 md:py-2 md:text-sm`}
+            href={link.href}
+            target={link.text === "Blog" ? "_blank" : "_self"}
+            rel={link.text === "Blog" ? "noopener" : undefined}
+          >
+            {link.text}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<script>
+  // Update navigation based on scroll position with Intersection Observer
+  const navItems = document.querySelectorAll(".nav-item");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navItems.forEach((item) => {
+            if (item.getAttribute("href") === `#${entry.target.id}`) {
+              item.classList.add("text-white", "after:opacity-100");
+            } else {
+              item.classList.remove("text-white", "after:opacity-100");
+            }
+          });
+        }
+      });
+    },
+    { threshold: 0.5 },
+  );
+
+  document.querySelectorAll("section").forEach((section) => {
+    observer.observe(section);
+  });
+
+  // Cleanup observer
+  document.onvisibilitychange = () => {
+    if (document.visibilityState === "hidden") {
+      observer.disconnect();
+    } else {
+      document.querySelectorAll("section").forEach((section) => {
+        observer.observe(section);
+      });
+    }
+  };
+</script>
+
+ 

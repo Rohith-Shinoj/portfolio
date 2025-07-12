@@ -1,0 +1,148 @@
+---
+// ParticlesBackground.astro
+---
+
+<div id="particles-js" class="fixed inset-0 -z-10"></div>
+
+<script>
+  // Type declaration for particles.js
+  declare global {
+    interface Window {
+      particlesJS: any;
+    }
+  }
+
+  function initParticles() {
+    // Check if particles.js is already loaded
+    if (typeof window.particlesJS !== 'undefined') {
+      loadParticlesConfig();
+      return;
+    }
+
+    // Load particles.js from CDN
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
+    script.onload = loadParticlesConfig;
+    script.onerror = () => console.warn('Failed to load particles.js from CDN');
+    document.head.appendChild(script);
+  }
+
+  function loadParticlesConfig() {
+    try {
+      // Add touch event listeners for better mobile interaction
+      const particlesContainer = document.getElementById('particles-js');
+      if (particlesContainer) {
+        particlesContainer.addEventListener('touchstart', function(e) {
+          e.preventDefault();
+        }, { passive: false });
+      }
+
+      window.particlesJS('particles-js', {
+        particles: {
+          number: {
+            value: 120,
+            density: {
+              enable: true,
+              value_area: 800
+            }
+          },
+          color: {
+            value: ["#2563eb", "#94a3b8", "#e2e8f0"]
+          },
+          shape: {
+            type: "circle",
+            stroke: {
+              width: 0,
+              color: "#000000"
+            }
+          },
+          opacity: {
+            value: 0.6,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 1,
+              opacity_min: 0.2,
+              sync: false
+            }
+          },
+          size: {
+            value: 4,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 2,
+              size_min: 1,
+              sync: false
+            }
+          },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#2563eb",
+            opacity: 0.4,
+            width: 1.5
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "bounce",
+            bounce: true,
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200
+            }
+          }
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: true,
+              mode: "repulse"
+            },
+            onclick: {
+              enable: true,
+              mode: "push"
+            },
+            ontouch: {
+              enable: true,
+              mode: "repulse"
+            },
+            resize: true
+          },
+          modes: {
+            repulse: {
+              distance: 100,
+              duration: 0.4
+            },
+            push: {
+              particles_nb: 6
+            },
+            grab: {
+              distance: 140,
+              line_linked: {
+                opacity: 0.8
+              }
+            }
+          }
+        },
+        retina_detect: true
+      });
+    } catch (error) {
+      console.warn("Particles failed to initialize:", error);
+    }
+  }
+
+  // Initialize particles when the DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initParticles);
+  } else {
+    // Small delay to ensure DOM is fully ready
+    setTimeout(initParticles, 100);
+  }
+</script> 
