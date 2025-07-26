@@ -52,15 +52,20 @@ const ogImgUrl = canonicalURL + socialImage;
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={ogImgUrl} />
+    <link rel="canonical" href={`https://www.rohithshinoj.com${Astro.url.pathname}`} />
   </head>
   <body class="bg-black font-sans">
     <ParticlesBackground />
-    <Header siteLogo={siteLogo} navLinks={navLinks} />
+    <header>
+      <Header siteLogo={siteLogo} navLinks={navLinks} />
+    </header>
     <FloatingNav navLinks={navLinks} />
     <main class="mx-auto max-w-3xl px-5">
       <slot />
     </main>
-    <Footer author={author} socialLinks={socialLinks} />
+    <footer>
+      <Footer author={author} socialLinks={socialLinks} />
+    </footer>
     <Analytics />
   </body>
 </html>

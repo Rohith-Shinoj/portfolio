@@ -43,6 +43,7 @@ export interface ProjectProps {
   image: string;
   linkPreview?: string;
   linkSource?: string;
+  linkBlog?: string;
   tags?: string[];
 }
 

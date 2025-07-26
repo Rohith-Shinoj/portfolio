@@ -27,7 +27,7 @@ export const SITE_CONTENT: SiteContent = {
     name: "Rohith Shinoj Kumar",
     specialty: "Software Engineer | Exploring Scalable Systems & ML",
     summary:
-      "I'm a final-year Computer Science and Engineering student at the National Institute of Technology Karnataka. I’m passionate about building scalable systems at the intersection of software engineering and machine learning. With a strong foundation in Python, C++, and ML, I’ve worked on end-to-end projects across MLOps and full-stack development — turning ideas into deployable, impactful solutions. Always eager to learn, collaborate, and innovate. Let’s connect!",
+      "I'm a final-year Computer Science and Engineering student at the National Institute of Technology Karnataka. I’m passionate about building scalable machine learning systems. With a strong foundation in Python, C++, and ML, I’ve worked on end-to-end projects across MLOps and full-stack development — turning ideas into deployable, impactful solutions. Always eager to learn, collaborate, and innovate. Let’s connect!",
     email: "rohithshinoj@gmail.com",
   },
   experience: [
@@ -72,24 +72,25 @@ export const SITE_CONTENT: SiteContent = {
       summary: [
         "Built a portfolio analytics platform with advanced risk models (VaR, CVaR, MPT) for real-time multi-asset analysis and optimizations",
         "Integrated Ollama-hosted local LLMs and Finnhub API data for live and historical financial data, generating contextual strategy insights and AI-powered financial narratives.",
-        "Built interactive dashboards using D3.js and LLM-powered tooltips, enabling real-time performance attribution, factor exposure analysis, and contextual insights from market data and portfolio behavior."
+        "Built interactive dashboards using AI-powered tooltips, enabling real-time performance attribution, factor exposure analysis, and contextual insights from market data and portfolio behavior."
       ],
       tags: ["Python", "Ollama (Local LLMs)", "REST APIs", "Flask", "react.js", "FinTech"],
       linkPreview: "https://www.z-alpha.rohithshinoj.com",
+      linkBlog: "",
       linkSource: "https://github.com/Rohith-Shinoj/ZAlpha-AI-Powered-Stock-Optimization/",
       image: "",
     },
     {
-      name: "DeliverEats: An On-Campus Food Delivery System",
+      name: "Reliable, Auditable Messaging Platform for Regulated Industries",
       summary: [
-        "Production-ready web application for online food ordering in campus.",
-        "Enables customers to browse menus, place orders, and make secure payments with restaurants inside NITK.",
-        "Dynamic, user-friendly interface.",
-        "Implemented secure payment workflows via Razorpay API and encrypted user transactions."
+        "Designed and implemented a scalable, fault-tolerant messaging backbone for regulated industries (like healthcare, finance, etc) requiring guaranteed delivery, end-to-end audit trails, and zero data loss in high-availability environments." ,
+        "Used Kafka for durable event streaming and Redis as a low-latency replay + dead-letter queue system with structured audit logging to PostgreSQL.",
+        "Built a dockerized deployment stack including Kafka, Redis, Postgres, and the app server for reproducible local and cloud environments."
       ],
-      tags: ["1", "2", "3", "4"],
+      tags: ["Kafka", "Redis", "PostgreSQL", "Python", "Docker", "FastAPI"],
       
       linkPreview: "",
+      linkBlog:"",
       linkSource: "https://github.com/Rohith-Shinoj/On-Campus-Food-Delivery",
       image: "/delivereats-logo.png",
     },
@@ -102,7 +103,8 @@ export const SITE_CONTENT: SiteContent = {
       ],
       tags: ["Semi-Supervised Learning", "ONNX", "PyTorch","TorchVision", "ViT"],
       linkPreview: "",
-      linkSource: "",
+      linkBlog: "https://www.deeper-thoughts-blog.rohithshinoj.com/blog/deploying-ai-in-agriculture",
+      linkSource: "https://github.com/Rohith-Shinoj/Semi-Supervised-Pomegranate-Disease-Detection",
       image: "/shopify-clon.png",
     },
   ],

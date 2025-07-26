@@ -73,7 +73,7 @@ const { projects } = Astro.props;
 </Section> -->
 <Section text="Featured Projects" href="projects">
   {
-    projects.map(({ name, summary, image, linkPreview, linkSource, tags }, index) => {
+    projects.map(({ name, summary, image, linkPreview, linkSource, linkBlog, tags }, index) => {
       const top = 98 + index * 40;
       return (
         <div
@@ -120,6 +120,16 @@ const { projects } = Astro.props;
                     class="after:relative after:bottom-[-5px] after:content-[url(/external.svg)] hover:underline"
                   >
                     Preview
+                  </a>
+                )}
+                {linkBlog && (
+                  <a
+                    href={linkBlog}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="after:relative after:bottom-[-5px] after:content-[url(/external.svg)] hover:underline"
+                  >
+                    Implementation
                   </a>
                 )}
               </div>
