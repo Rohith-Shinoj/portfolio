@@ -1,8 +1,0 @@
-{
-    "rewrites": [
-      {
-        "source": "/deeper-thoughts-blog/:path*",
-        "destination": "https://www.deeper-thoughts-blog.rohithshinoj.com/:path*"
-      }
-    ]
-  }

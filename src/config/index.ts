@@ -10,7 +10,7 @@ export const SITE_CONFIG: SiteConfig = {
     { text: "Experience", href: "#experience" },
     { text: "Projects", href: "#projects" },
     { text: "Publications", href: "#publications" },
-    { text: "Blog", href: "https://deeper-thoughts-blog.vercel.app" },
+    { text: "Blog", href: "https://deeper-thoughts-blog.rohithshinoj.com" },
     // { text: "About", href: "#about" },
   ],
   socialLinks: [
