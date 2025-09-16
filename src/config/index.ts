@@ -36,7 +36,14 @@ export const SITE_CONTENT: SiteContent = {
       position: "Research Engineer (Incoming)",
       startDate: "August 2025",
       endDate: "Present",
-      summary: ["Yet to join"],
+      summary: [
+        "Engineered low-level C/C++ modules for the TSOC National Firewall to filter and block malicious traffic from over 1 million IPs and 10,000+ ports/SNI combinations, enhancing national network security.",
+
+        "Implemented high-performance deep packet inspection (DPI) at the kernel level, processing up to 700,000 packets/sec with <1ms latency, reducing malicious traffic by 85% during stress tests.",
+
+        "Collaborated with a cross-platform team of 10+ developers to build a real-time monitoring dashboard and API tracking firewall metrics and system health for 200+ nationwide ISP nodes leveraging Prometheus and Grafana for actionable insights and end-to-end visibility"
+
+      ],
     },
     {
       company: "Accenture Inc.",
@@ -112,8 +119,8 @@ export const SITE_CONTENT: SiteContent = {
   publications: [
     {
       name: "1. H-Infinity Enhanced CNN-LSTM for Arrythmia Detection from Heart Sound Recordings",
-      conference: "",
-      date: "June 2025 (Under Review)",
+      conference: "IEEE International Conference on System Engineering and Technology (ICSET), Kaula Lampur, Malaysia",
+      date: "September 2025",
       link: "",
     },
     {
